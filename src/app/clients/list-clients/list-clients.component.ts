@@ -8,11 +8,9 @@ import { Subscription } from 'rxjs';
 import { ClientModelTable } from '../client.models';
 import { Router } from '@angular/router';
 import { ClientTableComponent } from '../components/client-table/client-table.component';
-import { ClientSearchComponent } from '../components/client-search/client-search.component';
-
 @Component({
   selector: 'app-list-clients',
-  imports: [ClientTableComponent, ClientSearchComponent],
+  imports: [ClientTableComponent],
   templateUrl: './list-clients.component.html',
   styleUrl: './list-clients.component.scss',
   providers: [
