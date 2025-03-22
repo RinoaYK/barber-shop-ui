@@ -1,3 +1,5 @@
+<div class="pb-5">
+<div class="search">
 <mat-form-field>
 	<mat-icon matPrefix>search</mat-icon>
 	<mat-label>Buscar cliente</mat-label>
@@ -6,9 +8,9 @@
 			<mat-icon>close</mat-icon>
 	</button>
 </mat-form-field>
+</div>
 
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 pt-6">
 	<ng-containter matColumnDef="name">
 			<th mat-header-cell *matHeaderCellDef>Nome</th>
 			<td mat-cell *matCellDef="let client">{{client.name}}</td>
@@ -43,3 +45,4 @@
 
 <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons>
 </mat-paginator>
+</div>

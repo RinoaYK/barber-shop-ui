@@ -5,3 +5,26 @@
 .update-button {
 	margin-left: 0.15rem;
 }
+
+.search{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+	.delete-button {
+		margin-bottom: 0.15rem;
+		transform: scale(0.8);
+	}
+
+	.update-button {
+		margin-bottom: 0.15rem;
+		transform: scale(0.8);
+	}
+
+	.search{
+		justify-content: center;
+	}
+}
+
