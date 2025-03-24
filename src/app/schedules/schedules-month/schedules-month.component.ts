@@ -59,7 +59,7 @@ export class SchedulesMonthComponent implements OnInit, OnDestroy {
     if (schedule.startAt && schedule.endAt && schedule.clientId) {
       const request: SaveScheduleRequest = { startAt: schedule.startAt, endAt: schedule.endAt, clientId: schedule.clientId }
       this.subscriptions.push(this.httpService.save(request).subscribe(() => {
-        this.snackbarManage.show('Agendamento realizado com sucesso!')
+        this.snackbarManage.show('Agendamento realizado.')
         if (this.selectedDate) {
           this.fetchSchedules(this.selectedDate)
         }

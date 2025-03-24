@@ -1,59 +1,40 @@
-# BarberShopUi
+# Barber Shop Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+## Visão Geral
 
-## Development server
+Este é o frontend da [**Barber Shop API**](https://github.com/RinoaYK/barber-shop-api), uma aplicação web desenvolvida para interagir com a API REST de uma barbearia moderna. O objetivo é oferecer uma interface intuitiva e responsiva para gerenciar clientes e agendamentos, com funcionalidades específicas que atendem às necessidades do dia a dia de uma barbearia.
 
-To start a local development server, run:
+[**Barber Shop deploy**](https://barber-shop-seven-nu.vercel.app/schedules/month): https://barber-shop-seven-nu.vercel.app/schedules/month
 
-```bash
-ng serve
-```
+## Principais Tecnologias
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+-   **Angular**
+-   **TypeScript**
+-   **Angular Material**
+-   **Bootstrap**
+-   **RxJS**
+-   **HTML5/CSS**
 
-## Code scaffolding
+## Funcionalidades Principais
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+-   **Responsividade:** A interface foi projetada para se adaptar a diferentes tamanhos de tela, desde dispositivos móveis até telas de desktop, utilizando media queries e ajustes dinâmicos como `transform: scale()`.
+-   **Busca por Nome de Cliente:** Implementada uma funcionalidade de busca em tempo real no campo de pesquisa, permitindo filtrar clientes por nome diretamente na lista exibida.
+-   **Clientes Já Atendidos:** Clientes cujo horário de agendamento já passou são automaticamente riscados na lista (ex.: com estilo CSS `text-decoration: line-through`), oferecendo uma visualização clara dos atendimentos concluídos.
+-   **Limite de Agendamento:** Regra de negócios implementada para permitir apenas um agendamento por cliente por dia, validada no frontend antes de enviar a requisição ao backend.
+-   **Horário de Atendimento:** Adicionado um intervalo fixo de funcionamento da barbearia: 9h às 18h (9 AM - 6 PM). Os agendamentos são restritos a esse período, com validação no formulário de agendamento.
+-   **Gerenciamento de Clientes e Agendamentos:** Interface para criar, atualizar, excluir e visualizar clientes.
+-   **Funcionalidades de agendar, remarcar e cancelar serviços, integradas à API.**
 
-```bash
-ng generate component component-name
-```
+## Destaques Técnicos
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+-   **Lazy Loading de Componentes:** As rotas foram configuradas para usar carregamento tardio (lazy loading), ou seja, os componentes só são carregados quando chamados. Isso melhora o desempenho inicial da aplicação, reduzindo o tempo de carregamento.
 
-```bash
-ng generate --help
-```
+    ```typescript
+    {
+        path: 'clients',
+        loadComponent: () => import('./clients/clients.component').then(m => m.ClientsComponent)
+    }
+    ```
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+-   **Integração com Backend:** Consome a Barber Shop API (Java 21, Spring Boot 3.4.3) via HTTP requests, utilizando serviços Angular para comunicação assíncrona com endpoints como `/clients` e `/schedules`.
+-   **Estilização Responsiva:** Uso de media queries para ajustar elementos como botões, tabelas e o paginador em diferentes resoluções.

@@ -1,0 +1,5 @@
+app-root[aria-hidden="true"] ~ .cdk-overlay-container {
+  .mat-mdc-snack-bar-container {
+    z-index: 1000;
+  }
+}
