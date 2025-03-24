@@ -4,7 +4,8 @@
 
 Este é o frontend da [**Barber Shop API**](https://github.com/RinoaYK/barber-shop-api), uma aplicação web desenvolvida para interagir com a API REST de uma barbearia moderna. O objetivo é oferecer uma interface intuitiva e responsiva para gerenciar clientes e agendamentos, com funcionalidades específicas que atendem às necessidades do dia a dia de uma barbearia.
 
-[**Barber Shop deploy**](https://barber-shop-seven-nu.vercel.app/schedules/month): https://barber-shop-seven-nu.vercel.app/schedules/month
+### Veja o site:
+[**Barber Shop**](https://barber-shop-seven-nu.vercel.app/schedules/month) deploy.
 
 ## Principais Tecnologias
 
