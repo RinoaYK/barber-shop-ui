@@ -13,7 +13,6 @@ Este é o frontend da [**Barber Shop API**](https://github.com/RinoaYK/barber-sh
 -   **TypeScript**
 -   **Angular Material**
 -   **Bootstrap**
--   **RxJS**
 -   **HTML5/CSS**
 
 ## Funcionalidades Principais
